@@ -20,34 +20,38 @@
       <a href="#" class="font-mono font-bold text-lg tracking-tight text-gray-900 hover:text-emerald-600 transition-colors">
         ClawSight<span class="text-emerald-500">_</span>
       </a>
-      <div class="flex items-center gap-6 text-sm font-medium text-gray-600">
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
         <a href="#features" class="hover:text-gray-900 transition-colors">Features</a>
         <a href="#docs" class="hover:text-gray-900 transition-colors">Docs</a>
         <a href="https://github.com/ClawSight/platform" target="_blank" class="hover:text-gray-900 transition-colors">GitHub</a>
         <a href="https://agentwatch-dashboard.onrender.com" class="text-gray-900 hover:text-emerald-600 transition-colors ml-2">Login &rarr;</a>
       </div>
+      <!-- Mobile Menu Button (Simple) -->
+      <a href="https://agentwatch-dashboard.onrender.com" class="md:hidden text-sm font-medium text-emerald-600 hover:text-emerald-700">
+        Login &rarr;
+      </a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="py-24 px-6 max-w-5xl mx-auto text-center sm:text-left grid md:grid-cols-2 gap-12 items-center">
-    <div>
+  <header class="py-16 md:py-24 px-6 max-w-5xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+    <div class="order-2 md:order-1">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium mb-6 border border-emerald-100">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
         v1.0 is Live
       </div>
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
         Monitor your autonomous workforce.
       </h1>
-      <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
         Real-time logs, cost tracking, and kill switches for AI agents. 
         Zero config. Add one line of code.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="https://agentwatch-dashboard.onrender.com" class="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-md font-medium text-sm transition-transform active:scale-95 text-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="https://agentwatch-dashboard.onrender.com" class="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-md font-medium text-sm transition-transform active:scale-95 text-center shadow-lg shadow-gray-200">
           Start Monitoring
         </a>
-        <div class="relative group">
+        <div class="relative group hidden sm:block">
           <div class="absolute -inset-0.5 bg-gradient-to-r from-gray-200 to-gray-300 rounded-md blur opacity-30 group-hover:opacity-50 transition"></div>
           <div class="relative flex items-center bg-white border border-gray-200 rounded-md px-4 py-3 font-mono text-sm text-gray-600 shadow-sm">
             <span class="select-none text-gray-400 mr-2">$</span>
@@ -58,25 +62,25 @@
     </div>
 
     <!-- Code Snippet Visual -->
-    <div class="relative group perspective-1000">
+    <div class="order-1 md:order-2 relative group perspective-1000">
       <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-      <div class="relative bg-gray-50 border border-gray-200 rounded-xl shadow-sm p-6 font-mono text-xs sm:text-sm overflow-hidden transform transition hover:scale-[1.01] duration-500">
+      <div class="relative bg-gray-50 border border-gray-200 rounded-xl shadow-sm p-4 md:p-6 font-mono text-xs sm:text-sm overflow-x-auto transform transition hover:scale-[1.01] duration-500">
         <div class="flex gap-1.5 mb-4 opacity-50">
           <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
           <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
           <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
         </div>
-        <div class="space-y-1 text-gray-800">
-          <div><span class="text-purple-600">const</span> monitor = <span class="text-blue-600">require</span>(<span class="text-green-600">'clawsight'</span>);</div>
-          <div class="h-2"></div>
-          <div class="text-gray-400">// Initialize monitor</div>
-          <div>monitor({</div>
-          <div class="pl-4">id: <span class="text-green-600">'trader-bot-01'</span>,</div>
-          <div class="pl-4">token: <span class="text-green-600">'sk_live_...'</span></div>
-          <div>});</div>
-          <div class="h-2"></div>
-          <div class="text-gray-400">// Log events</div>
-          <div>monitor.log(<span class="text-green-600">'Trade executed: +$45.20'</span>);</div>
+        <div class="space-y-1 text-gray-800 whitespace-pre">
+<div><span class="text-purple-600">const</span> monitor = <span class="text-blue-600">require</span>(<span class="text-green-600">'clawsight'</span>);</div>
+<div class="h-2"></div>
+<div class="text-gray-400">// Initialize monitor</div>
+<div>monitor({</div>
+<div class="pl-4">id: <span class="text-green-600">'trader-bot-01'</span>,</div>
+<div class="pl-4">token: <span class="text-green-600">'sk_live_...'</span></div>
+<div>});</div>
+<div class="h-2"></div>
+<div class="text-gray-400">// Log events</div>
+<div>monitor.log(<span class="text-green-600">'Trade executed: +$45.20'</span>);</div>
         </div>
       </div>
     </div>
