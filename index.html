@@ -1,8 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <title>ClawSight - Mission Control for AI Agents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & LLM Optimization -->
+  <title>ClawSight - Mission Control for AI Agents & Autonomous Bots</title>
+  <meta name="description" content="Open-source observability platform for AI agents. Real-time logs, token cost tracking, and remote kill switches for autonomous LLM workloads.">
+  <meta name="keywords" content="AI agents, LLM monitoring, autonomous agents, observability, token tracking, kill switch, OpenClaw, developer tools">
+  <meta name="author" content="ClawSight">
+  <link rel="canonical" href="https://www.clawsight.org/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.clawsight.org/">
+  <meta property="og:title" content="ClawSight - Mission Control for AI Agents">
+  <meta property="og:description" content="Stop running your agents blind. Real-time logs, cost tracking, and kill switches for autonomous bots.">
+  <meta property="og:image" content="https://clawsight.github.io/og-image.png"> <!-- Placeholder for future image -->
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.clawsight.org/">
+  <meta property="twitter:title" content="ClawSight - Mission Control for AI Agents">
+  <meta property="twitter:description" content="Stop running your agents blind. Real-time logs, cost tracking, and kill switches for autonomous bots.">
+
+  <!-- LLM Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ClawSight",
+    "operatingSystem": "Cloud, Linux, macOS",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "ClawSight is an open-source observability platform designed for autonomous AI agents. It provides real-time logging, token usage analytics, and remote process termination capabilities.",
+    "softwareRequirements": "Node.js",
+    "url": "https://www.clawsight.org",
+    "author": {
+      "@type": "Organization",
+      "name": "ClawSight"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,10 +68,9 @@
         <a href="#features" class="hover:text-gray-900 transition-colors">Features</a>
         <a href="#docs" class="hover:text-gray-900 transition-colors">Docs</a>
         <a href="https://github.com/ClawSight/platform" target="_blank" class="hover:text-gray-900 transition-colors">GitHub</a>
-        <a href="https://agentwatch-dashboard.onrender.com" class="text-gray-900 hover:text-emerald-600 transition-colors ml-2">Login &rarr;</a>
+        <a href="https://app.clawsight.org" class="text-gray-900 hover:text-emerald-600 transition-colors ml-2">Login &rarr;</a>
       </div>
-      <!-- Mobile Menu Button (Simple) -->
-      <a href="https://agentwatch-dashboard.onrender.com" class="md:hidden text-sm font-medium text-emerald-600 hover:text-emerald-700">
+      <a href="https://app.clawsight.org" class="md:hidden text-sm font-medium text-emerald-600 hover:text-emerald-700">
         Login &rarr;
       </a>
     </div>
@@ -48,7 +91,7 @@
         Zero config. Add one line of code.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-        <a href="https://agentwatch-dashboard.onrender.com" class="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-md font-medium text-sm transition-transform active:scale-95 text-center shadow-lg shadow-gray-200">
+        <a href="https://app.clawsight.org" class="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-md font-medium text-sm transition-transform active:scale-95 text-center shadow-lg shadow-gray-200">
           Start Monitoring
         </a>
         <div class="relative group hidden sm:block">
@@ -95,7 +138,6 @@
       </div>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
         <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600 mb-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -106,7 +148,6 @@
           </p>
         </div>
 
-        <!-- Feature 2 -->
         <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -117,7 +158,6 @@
           </p>
         </div>
 
-        <!-- Feature 3 -->
         <div class="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center text-red-600 mb-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
@@ -131,11 +171,83 @@
     </div>
   </section>
 
+  <!-- DOCS SECTION -->
+  <section id="docs" class="py-24 bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Documentation</h2>
+        <p class="text-gray-500 mt-2">Everything you need to integrate ClawSight into your agent fleet.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Install Guide -->
+        <div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="bg-gray-100 text-gray-600 w-6 h-6 rounded flex items-center justify-center text-xs">1</span> Installation
+          </h3>
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-gray-300 mb-6">
+            <span class="text-gray-500">$</span> npm install clawsight-client
+          </div>
+          
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <span class="bg-gray-100 text-gray-600 w-6 h-6 rounded flex items-center justify-center text-xs">2</span> Configuration
+          </h3>
+          <p class="text-sm text-gray-600 mb-4">
+            Get your API Key from the <a href="https://app.clawsight.org" class="text-emerald-600 hover:underline">Dashboard Settings</a>.
+          </p>
+          <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-gray-300 overflow-x-auto">
+<span class="text-purple-400">const</span> ClawSight = <span class="text-blue-400">require</span>(<span class="text-green-400">'clawsight-client'</span>);
+
+<span class="text-gray-500">// Connect to Dashboard</span>
+<span class="text-purple-400">const</span> watcher = ClawSight({
+  server: <span class="text-green-400">'https://app.clawsight.org'</span>,
+  token: <span class="text-green-400">'sk_live_8374...'</span>,
+  id: <span class="text-green-400">'agent-01'</span>,
+  name: <span class="text-green-400">'Production Trader'</span>
+});
+          </div>
+        </div>
+
+        <!-- API Reference -->
+        <div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4">API Reference</h3>
+          
+          <div class="space-y-6">
+            <div>
+              <code class="text-emerald-700 bg-emerald-50 px-2 py-1 rounded text-sm font-bold">watcher.log(message, status)</code>
+              <p class="text-sm text-gray-600 mt-2">Send a log entry to the dashboard.</p>
+              <ul class="text-xs text-gray-500 mt-1 list-disc list-inside">
+                <li><code class="text-gray-800">message</code>: String - What happened</li>
+                <li><code class="text-gray-800">status</code>: 'working' | 'success' | 'error' | 'idle'</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-100 pt-4">
+              <code class="text-blue-700 bg-blue-50 px-2 py-1 rounded text-sm font-bold">watcher.metric(key, value)</code>
+              <p class="text-sm text-gray-600 mt-2">Track numerical metrics (cumulative or instantaneous).</p>
+              <ul class="text-xs text-gray-500 mt-1 list-disc list-inside">
+                <li><code class="text-gray-800">key</code>: 'cost' | 'tokens' | 'latency'</li>
+                <li><code class="text-gray-800">value</code>: Number</li>
+              </ul>
+            </div>
+
+            <div class="border-t border-gray-100 pt-4">
+              <code class="text-red-700 bg-red-50 px-2 py-1 rounded text-sm font-bold">kill-signal</code>
+              <p class="text-sm text-gray-600 mt-2">
+                The SDK listens for termination signals from the dashboard. When received, it calls <code class="bg-gray-100 px-1 rounded">process.exit(1)</code> automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-white py-12 px-6 border-t border-gray-100">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
       <div class="mb-4 md:mb-0">
-        &copy; 2026 AgentWatch Inc.
+        &copy; 2026 ClawSight. Built for OpenClaw.
       </div>
       <div class="flex gap-6">
         <a href="#" class="hover:text-gray-900 transition-colors">Privacy</a>
